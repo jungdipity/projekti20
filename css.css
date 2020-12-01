@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+nav {
+    width: 100%;
+    float: top;
+    display: flex;
+    justify-content: space-between;
+    background-color: lightsteelblue;
+    padding: 15px;
+}
+
+#right {
+    width: 20%;
+    height: 100%;
+    float: right;
+    background-color: aquamarine;
+    padding-left: 35px;
+    padding-top: 20px;
+}
+
+#left {
+    padding-top: 50px;
+    text-align: center;
+    height: 100%;
+    background-color: aqua;
+}
+
+.otsikko {
+    padding: 7px;
+}
+
+#suositut {
+    margin-top: 35px;
+}
+
+.blogitEsilla {
+    width: 20%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #dddddd;
+}
+
+#blogilista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
