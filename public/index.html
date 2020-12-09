@@ -13,7 +13,7 @@
   <body onload="onPageLoading()">
 
     <div class="navbar-container">
-      <div class="topnav">
+      <div class="topnav" id="topnavbar">
         <a id="navhome" class="" href="/ " onclick="window.location.href='/'">Home</a>
         <a id="navmyblog" class="" href="">My blog</a>
         <a id="navsignup" class="" href="/ ">Sign up</a>
@@ -33,6 +33,9 @@
             <i class="fa fa-search"></i>
           </button>
         </div>
+        <a href="javascript:void(0);" class="menuIcon" onclick="openMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </div>
 

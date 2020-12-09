@@ -805,3 +805,12 @@ function isnull(value, replacingValue) {
   }
   return returnValue;
 }
+
+function openMenu() {
+  const nav = document.getElementById("topnavbar");
+  if (nav.className === "topnav") {
+    nav.className += " responsive";
+  } else {
+    nav.className = "topnav";
+  }
+}
