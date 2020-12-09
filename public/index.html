@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Raleway&display=swap" rel="stylesheet">
+  </head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+  <title>Blogiprojekti</title>
+  <body onload="onPageLoading()">
+
+    <div class="navbar-container">
+      <div class="topnav">
+        <a id="navhome" class="" href="/ " onclick="window.location.href='/'">Home</a>
+        <a id="navmyblog" class="" href="">My blog</a>
+        <a id="navsignup" class="" href="/ ">Sign up</a>
+        <a id="navlogin" class="" href="/ ">Log in</a>
+        <a id="navlogout" class="" href="/ ">Log out</a>
+        <a id="userinfo"></a>
+        <div class="search-container">
+          <input
+            id="search"
+            type="text"
+            placeholder="Search.."
+            name="search"
+            onkeydown="if (event.keyCode == 13)
+          document.getElementById('btnSearch').click()"
+          />
+          <button id="btnSearch" type="submit" onclick="renderSearchResults();">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="searchresultsContainer"><h2>Haun tulokset:</h2></div>
+
+    <form id="loginForm" action="#">
+      <div class="logincontainer">
+        <h1>Log in</h1>
+        <hr />
+
+        <label for="email"><b>Username</b></label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          name="username"
+          id="username"
+          autocomplete="on"
+          required
+        />
+
+        <label for="password"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          id="password"
+          autocomplete="on"
+          required
+        />
+        <hr />
+        <button type="submit" class="loginbtn">Log in</button>
+      </div>
+    </form>
+
+    <form id="signupForm" action="#">
+      <div class="signupcontainer">
+        <h1>Sign up</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr />
+
+        <label for="Username"><b>Username</b></label>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          name="username"
+          id="username"
+          required
+        />
+
+        <label for="email"><b>Email</b></label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          name="email"
+          id="email"
+          required
+        />
+
+        <label for="password"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          id="password"
+          autocomplete="on"
+          required
+        />
+
+        <label for="password-repeat"><b>Repeat Password</b></label>
+        <input
+          type="password"
+          placeholder="Repeat Password"
+          name="password-repeat"
+          id="password-repeat"
+          autocomplete="on"
+          required
+        />
+        <hr />
+
+        <p>
+          By creating an account you agree to our Terms & Privacy.
+        </p>
+        <button type="submit" class="registerbtn">Sign up</button>
+      </div>
+
+    </form>
+
+    <div class="mainContainer">
+    <div class="frontpageContainer">
+      <h1 class="mainTitle">Popular blog posts</h1>
+      <ul id="popularBlogitList"></ul>
+      <h1 class="mainTitle">Random blog posts</h1>
+      <ul id="randomBlogitList">
+      </ul>
+      </div>
+  </div>
+    <script src="./js/render.js"></script>
+  </body>
+</html>
