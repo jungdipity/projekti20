@@ -34,8 +34,8 @@ const login = (req, res) => {
 };
 
 const user_create_post = async (req, res, next) => {
-  //console.log('req:' + req.body);
-  //console.log('res: ' + res.body);
+  console.log('req:' + req.body);
+  console.log('res: ' + res.body);
 
   const errors = validationResult(req);
 

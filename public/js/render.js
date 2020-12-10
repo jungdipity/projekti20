@@ -74,7 +74,7 @@ const renderUsersBlogs = async () => {
       <span class="content">` + blogi.Content + `</span>
       </div>
       <p class="blogLikes">Likes: ` + blogi.amountOfLikes + ` <button id="like">+</button><button id="dislike">-</button></p>
-      <p class="blogCategory">Category: <button>dfg</button></p>`
+      <p class="blogCategory">Category: <button class="categoryButton">dfg</button></p>`
 
       if (sessionStorage.getItem("loggedUserId") !== undefined && blogi.UserID == sessionStorage.getItem("loggedUserId")) {
         leftcolumn+='<button id="editBlog" onclick="openModifyBlogForm('+blogi.ID+')">Edit</button><button id="deleteBlog" onclick="deleteBlog('+blogi.ID+')">Delete</button>';
